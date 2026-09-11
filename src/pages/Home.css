@@ -1,0 +1,220 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+  background-color: #f5f8f6;
+  padding: 80px 0;
+}
+
+.hero-content {
+  padding: 30px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(8, 79, 45, 0.1);
+  color: rgb(8, 79, 45);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  color: #212529;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: rgb(8, 79, 45);
+}
+
+.hero-content p {
+  color: #6c757d;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 550px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.shop-btn {
+  background-color: rgb(8, 79, 45);
+  color: white;
+  padding: 11px 25px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.shop-btn:hover {
+  background-color: rgb(6, 65, 37);
+  color: whitesmoke;
+}
+
+.explore-btn {
+  color: rgb(8, 79, 45);
+  border: 1px solid rgb(8, 79, 45);
+  padding: 11px 25px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.explore-btn:hover {
+  background-color: rgb(8, 79, 45);
+  color: white;
+}
+
+/* =========================
+   Hero Visual
+========================= */
+
+.hero-image {
+  min-height: 350px;
+  background-color: rgb(8, 79, 45);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(8, 79, 45, 0.2);
+}
+
+.shopping-icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.hero-image h3 {
+  color: white;
+  font-weight: 600;
+}
+
+.hero-image p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   Categories
+========================= */
+
+.categories-section {
+  padding: 70px 0;
+  background-color: white;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  color: rgb(8, 79, 45);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #6c757d;
+}
+
+.category-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 25px 10px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: rgb(8, 79, 45);
+  box-shadow: 0 8px 20px rgba(8, 79, 45, 0.1);
+}
+
+.category-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.category-card h5 {
+  color: rgb(8, 79, 45);
+  margin: 0;
+}
+
+/* =========================
+   Features
+========================= */
+
+.features-section {
+  background-color: #f5f8f6;
+  padding: 50px 0;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  border: 1px solid #e9ecef;
+}
+
+.feature-icon {
+  font-size: 35px;
+}
+
+.feature-card h5 {
+  color: rgb(8, 79, 45);
+  margin-bottom: 5px;
+}
+
+.feature-card p {
+  color: #6c757d;
+  margin: 0;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+    min-height: 280px;
+  }
+}

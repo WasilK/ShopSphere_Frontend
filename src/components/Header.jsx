@@ -3,9 +3,9 @@ import "./Header.css";
 
 export function Header() {
   return (
-    <nav className="navbar navbar-expand-lg shopsphere-navbar">
-      <div className="container">
-        <Link className="navbar-brand shopsphere-logo" to="/">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container nav-list-container">
+        <Link className="navbar-brand" to="/">
           ShopSphere
         </Link>
 
@@ -24,57 +24,21 @@ export function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link shopsphere-link" to="/">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link shopsphere-link" to="/login">
+              <Link className="nav-link" to="/login">
                 Login
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link shopsphere-link" to="/signup">
+              <Link className="nav-link" to="/signup">
                 Signup
               </Link>
-            </li>
-
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle shopsphere-link"
-                to="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Categories
-              </Link>
-
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" to="/category/electronics">
-                    Electronics
-                  </Link>
-                </li>
-
-                <li>
-                  <Link className="dropdown-item" to="/category/clothing">
-                    Clothing
-                  </Link>
-                </li>
-
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-
-                <li>
-                  <Link className="dropdown-item" to="/products">
-                    All Products
-                  </Link>
-                </li>
-              </ul>
             </li>
           </ul>
 
@@ -85,7 +49,7 @@ export function Header() {
               placeholder="Search products..."
             />
 
-            <button className="btn shopsphere-search-btn" type="submit">
+            <button className="btn" type="submit">
               Search
             </button>
           </form>
