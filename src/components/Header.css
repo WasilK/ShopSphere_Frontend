@@ -1,0 +1,58 @@
+.navbar {
+  background-color: rgb(8, 79, 45);
+}
+
+.navbar-brand,
+.navbar-brand:visited,
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:focus {
+  color: white;
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: white;
+}
+
+.btn,
+.btn:visited,
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: white;
+  border: none;
+}
+
+.navbar-brand:hover,
+.nav-link:hover,
+.btn:hover {
+  color: whitesmoke;
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 6px 9px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+/* Bootstrap hamburger icon */
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
