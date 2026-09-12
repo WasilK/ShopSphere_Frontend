@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
-export function Header({ isLoggedIn, setIsLoggedIn }) {
+export function Header({ isLoggedIn, setIsLoggedIn, isAdmin }) {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -36,26 +36,38 @@ export function Header({ isLoggedIn, setIsLoggedIn }) {
             </li>
 
             <li className="nav-item">
-              {!isLoggedIn ? (
+              {isLoggedIn ? (
+                isAdmin ? (
+                  <Link className="nav-link" to="/">
+                    Create Product
+                  </Link>
+                ) : (
+                  <Link className="nav-link" to="/cart">
+                    Cart
+                  </Link>
+                )
+              ) : (
                 <Link className="nav-link" to="/login">
                   Login
-                </Link>
-              ) : (
-                <Link className="nav-link" to="/cart">
-                  Cart
                 </Link>
               )}
             </li>
 
             <li className="nav-item">
-              {!isLoggedIn ? (
-                <Link className="nav-link" to="/signup">
+              {isLoggedIn ? (
+                isAdmin ? (
+                  <button className="nav-link" onClick={handleLogout}>
+                    Logout
+                  </button>
+                ) : (
+                  <button className="nav-link" onClick={handleLogout}>
+                    Logout
+                  </button>
+                )
+              ) : (
+                <Link className="nav-link" to="/login">
                   Signup
                 </Link>
-              ) : (
-                <button className="nav-link" onClick={handleLogout}>
-                  Logout
-                </button>
               )}
             </li>
           </ul>

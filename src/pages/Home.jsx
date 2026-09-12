@@ -1,10 +1,14 @@
 import { Header } from "../components/Header";
 import "./Home.css";
 
-export function Home({ isLoggedIn, setIsLoggedIn }) {
+export function Home({ isLoggedIn, setIsLoggedIn, isAdmin}) {
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Header
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+        isAdmin={isAdmin}
+      />
 
       {/* Hero Section */}
       <section className="hero-section">

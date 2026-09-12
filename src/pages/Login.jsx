@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-export function Login({ setIsLoggedIn }) {
+export function Login({ setIsLoggedIn, setIsAdmin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [backendError, setBackendError] = useState("");
@@ -25,7 +25,11 @@ export function Login({ setIsLoggedIn }) {
 
       // If backend returns JWT
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("role", response.data.role);
       setIsLoggedIn(true);
+      setIsAdmin(response.data.role === "ADMIN");
+
+      console.log(response.data.role);
 
       navigate("/");
     } catch (error) {
