@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
-export function Header() {
+export function Header({ isLoggedIn, setIsLoggedIn }) {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container nav-list-container">
@@ -30,15 +36,27 @@ export function Header() {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
+              {!isLoggedIn ? (
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              ) : (
+                <Link className="nav-link" to="/cart">
+                  Cart
+                </Link>
+              )}
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                Signup
-              </Link>
+              {!isLoggedIn ? (
+                <Link className="nav-link" to="/signup">
+                  Signup
+                </Link>
+              ) : (
+                <button className="nav-link" onClick={handleLogout}>
+                  Logout
+                </button>
+              )}
             </li>
           </ul>
 

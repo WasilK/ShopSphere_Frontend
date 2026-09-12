@@ -1,0 +1,128 @@
+.signup-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 35px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(8, 79, 45, 0.12);
+  border: 1px solid #e9ecef;
+}
+
+/* Title */
+
+.signup-title {
+  text-align: center;
+  color: rgb(8, 79, 45);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Labels */
+
+.signup-container .form-label {
+  color: rgb(8, 79, 45);
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+/* Input */
+
+.signup-container .form-control {
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.signup-container .form-control:focus {
+  border-color: rgb(8, 79, 45);
+  box-shadow: 0 0 0 3px rgba(8, 79, 45, 0.12);
+}
+
+/* Invalid input */
+
+.signup-container .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.signup-container .form-control.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.12);
+}
+
+/* Error message */
+
+.signup-container .invalid-feedback {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Backend error */
+
+.signup-container .alert-danger {
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Signup button */
+
+.signup-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 15px;
+
+  background-color: rgb(8, 79, 45);
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+  background-color: rgb(6, 65, 37);
+  color: whitesmoke;
+}
+
+.signup-btn:active {
+  background-color: rgb(5, 55, 31);
+  color: white;
+}
+
+.signup-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(8, 79, 45, 0.2);
+}
+
+/* Login link */
+
+.signup-link {
+  color: rgb(8, 79, 45);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link:hover {
+  color: rgb(6, 65, 37);
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+  .signup-container {
+    margin: 30px 15px;
+    padding: 30px 25px;
+  }
+
+  .signup-title {
+    font-size: 24px;
+  }
+}
